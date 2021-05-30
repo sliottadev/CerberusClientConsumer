@@ -1,0 +1,67 @@
+
+html,body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #5c1585;
+}
+
+.card-header h4, .card-header h3{
+  color: white;
+}
+
+.card{
+  height: 95%;
+  margin-top: 25%;
+  width: 95%;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+.input-group-prepend span{
+  width: 40px;
+  background-color: #ddb4f6;
+  height: 40px;
+  color: black;
+  border:0 !important;
+  font-size: 15px;
+}
+
+.form-control{
+  height: 40px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.avatar{
+  width: 30%;
+  height: 30%;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: white solid 2px;
+}
+
+.reg_btn{
+  color: black;
+  background-color: #ddb4f6;
+  width: 100px;
+}
+
+.reg_btn:hover{
+  color: black;
+  background-color: white;
+}
+
+.powered{
+  color: white;
+  font-size: 10px;
+  text-align: right;
+}
+
+.ocultar{
+	display: none;
+}
+
+.mostrar{
+	display: flex;
+}

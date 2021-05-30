@@ -22,19 +22,18 @@
           </div>
         </div>
         <div class="card-body">
-          <form action="#" th:action="@{/home}" th:object="${UserLoginDTO}" method="post" id="userFrm">
+          <form [formGroup]="dataForm" (ngSubmit)="onSubmit()" id="userFrm">
             <div class="input-group form-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"><em class="fas fa-user"></em></span>
               </div>
-              <input type="text" class="form-control" placeholder="username" th:field="*{userLogin}" required>
-
+              <input type="text" class="form-control" placeholder="username" formControlName="name" required>
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend">
                 <span class="input-group-text"><em class="fas fa-key"></em></span>
               </div>
-              <input type="password" class="form-control" placeholder="password" th:field="*{passWord}" required>
+              <input type="password" class="form-control" placeholder="password" formControlName="pass" required>
             </div>
             <div class="row align-items-center remember">
               <input type="checkbox">Remember Me
