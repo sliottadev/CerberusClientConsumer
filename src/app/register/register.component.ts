@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms'
 import { CerberusApiService } from '../services/cerberus-api.service'
 
 @Component({
-  selector: 'app-register',
+  //selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })

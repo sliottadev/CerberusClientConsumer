@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms'
 import { CerberusApiService } from '../services/cerberus-api.service'
 
 @Component({
-  selector: 'app-login',
+  //selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

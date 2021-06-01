@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cerberus Consumer</title>
+</head>
+<body>
+	<div> <!-- ST - Main Div -->
+		<!-- Brand Header -->
+		<div class="brand-header">
+		    <button type="button" class="header-btnmenu" data-bs-toggle="modal" data-bs-target="#exampleModal"> <span class="spn-icnMenu"><em class="fas fa-bars"></em></span> </button>
+		    <h3 class="company cpny-name"><strong>Cerberus Bar Test</strong></h3>
+		    <h6 class="company cpny-line">Av. NoName 6789</h6>
+		    <h6 class="company cpny-line">Lu. a Vi. 16hs-5hs</h6>
+		</div>
+		<!-- END Brand Header -->
+
+		<div class="menu-ctn"> <!-- Menu Container -->
+			<!-- Promo Carrusel -->
+			<div id="carousel-promo" class="carousel slide" data-interval="4000" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="carousel-promo" data-slide-to="0" class="active"></li>
+					<li data-target="carousel-promo" data-slide-to="1" ></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active"> <img class="carousel-img" src="../assets/img/promo1_def.jpg" alt=""> </div> <!--Recomendado 340x150px-->
+					<div class="carousel-item">        <img class="carousel-img" src="../assets/img/promo2_def.jpg" alt=""> </div>
+				</div>
+				<a class="carousel-control-prev" href="#carousel-promo" data-slide="prev"> <span class="carousel-control-prev-icon"> </span> </a>
+				<a class="carousel-control-next" href="#carousel-promo" data-slide="next"> <span class="carousel-control-next-icon"> </span> </a>
+			</div>
+			<!-- END Promo Carrusel -->
+
+			<!--Products-->
+			<div *ngFor="let cat of categories">
+				<p class="mn-category"> {{cat.description}} </p>
+				<div *ngFor="let prod of products;">
+					<div class="card itm-card shadow-sm rounded" *ngIf="(prod.category.description == cat.description) && (prod.fatherId==null)">
+						<div class="card-body itm-card-body">
+							<div class="container">
+								<div class="row">
+									<div class="col-8 itm-card-col-8">
+										<p class="itm-title">{{prod.description}} <span class="badge bg-order">3</span> </p>
+										<p class="itm-desc"> {{prod.details}} </p>
+										<p class="itm-price"><strong> ${{prod.price}} </strong></p>
+									</div>
+									<div class="col-4">
+										<img class="itm-img rounded" src="../assets/img/image-def.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--END Products-->
+
+		</div> <!-- END Menu Container -->
+
+		<!-- ST -Menu Modal-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header mm-header">
+		        <div class="row row-header">
+		        	<p class="pHeader-pic"> <img class="card-pic" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="" srcset=""></p>
+		        	<p class="pHeader-usr">Sebastian Liotta</p>
+		        	<p class="pHeader-mail">sebs.liotta@gmail.com</p>
+		        </div>
+		      </div>
+		      <div class="modal-body mm-body">
+				<div class="d-grid gap-2">
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-shopping-cart"></em></span> Mi Pedido</button>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-star"></em></span> Promociones</button>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-receipt"></em></span> Pedidos</button>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-bell"></em></span> Mesero</button>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-credit-card"></em></span> Pagar</button>
+		  			<hr>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-user-plus"></em></span> Registrarme</button>
+		  			<button class="btn btn-primary mm-btn" type="button"> <span class="spn-icnBtn"><em class="fas fa-question-circle"></em></span> Ayuda</button>
+				</div>
+		      </div>
+
+		      <div class="modal-footer mm-footer">
+		      	<p class="pFooter actual"> Pedido: <strong> $750,00</strong></p>
+		      	<p class="pFooter sessionStrt"> Inicio: <strong> 1h 22m </strong></p>
+		      	<p class="pFooter stateOrder">Estado: <strong>Pendiente</strong></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- END - Menu Modal-->
+
+	</div> <!-- END - Main Div -->
+</body>
+
+<footer>
+	<div class="v-footer">
+		<div class="d-grid gap-2">
+		  <button class="btn btn-pay" type="button">Pagar</button>
+		</div>
+	</div>
+</footer>
+
+</html>
