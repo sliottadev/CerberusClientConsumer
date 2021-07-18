@@ -33,23 +33,32 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><em class="fas fa-key"></em></span>
               </div>
-              <input type="password" class="form-control" placeholder="password" formControlName="pass" required>
+              <input type="password" class="form-control" placeholder="password" formControlName="pass" value="87654321" required>
             </div>
             <div class="row align-items-center remember">
-              <input type="checkbox">Remember Me
-            </div>
+              <div class="d-flex justify-content-center links">
+                <a href="register/">Forget your password?</a>
+              </div>
+                </div>
             <div class="form-group">
               <input type="submit" value="Login" class="btn float-right login_btn">
+              <input value="Invitado" class="btn float-right login_btn btn-invitado">
             </div>
           </form>
         </div>
         <div class="card-footer">
           <div class="d-flex justify-content-center links">
-            Don't have an account?<a href="userRegister/">Sign Up</a>
+            Don't have an account?<a href="register/">Sign Up</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+<footer class="footer">
+  <div class="container powered">
+    powered by Cerberus®
+  </div>
+</footer>
+
 </html>

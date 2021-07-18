@@ -5,9 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './vistas/login/login.component';
+import { RegisterComponent } from './vistas/register/register.component';
+import { OrderComponent } from './vistas/order/order.component';
 
 @NgModule({
   declarations: [

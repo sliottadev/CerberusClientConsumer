@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CerberusApiService } from '../services/cerberus-api.service';
+import { SessionService } from 'src/app/session/session.service';
+import { CerberusApiService } from '../../cerberusApiServices/cerberus-api.service';
 
 @Component({
   //selector: 'app-order',
@@ -12,7 +13,9 @@ export class OrderComponent implements OnInit {
   categories;
   product;
 
-  constructor( private cerberusApiService: CerberusApiService) {
+  constructor(
+    private cerberusApiService: CerberusApiService,
+    ) {
   }
 
   ngOnInit(): void {
@@ -20,8 +23,8 @@ export class OrderComponent implements OnInit {
     this.getProducts();
   }
 
-  private getProducts (){
-    this.cerberusApiService.getProduct()
+  private async getProducts (){
+    (await this.cerberusApiService.getProduct())
       .subscribe(
         res => {
           this.products = res
@@ -31,8 +34,8 @@ export class OrderComponent implements OnInit {
     );
   }
 
-  private getCategories(){
-    this.cerberusApiService.getCategories()
+  private async getCategories(){
+    (await this.cerberusApiService.getCategories())
     .subscribe(
       res => {
         this.categories = res;

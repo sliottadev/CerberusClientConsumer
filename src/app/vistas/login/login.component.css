@@ -86,6 +86,19 @@ input:focus{
 
 .links{
   color: white;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.powered{
+  color: white;
+  font-size: 10px;
+  text-align: right;
+  width: 85%;
+}
+
+.btn-invitado{
+  margin-left: 50px;
 }
 
 .links a{
