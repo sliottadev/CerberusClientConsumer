@@ -34,9 +34,9 @@
 			<!-- END Promo Carrusel -->
 
 			<!--Products-->
-			<div *ngFor="let cat of categories">
+      <div *ngFor="let cat of categories">
 				<p class="mn-category"> {{cat.description}} </p>
-				<div *ngFor="let prod of products;">
+				<div *ngFor="let prod of products">
 					<div class="card itm-card shadow-sm rounded" *ngIf="(prod.category.description == cat.description) && (prod.fatherId==null)">
 						<div class="card-body itm-card-body">
 							<div class="container">

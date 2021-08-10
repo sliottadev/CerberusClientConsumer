@@ -1,0 +1,13 @@
+{
+  "login": {
+    "login" : "Inicio de Sesión",
+    "username" : "nombre de usuario / correo",
+    "password" : "contraseña",
+    "forget" : "¿Olvidaste la contraseña?",
+    "submit" : "Ingresar",
+    "guest" : "Invitado",
+    "account" : "¿No tenés cuenta?",
+    "register" : "Registrate",
+    "powered" : "Desarrollado por Cerberus®"
+  }
+}

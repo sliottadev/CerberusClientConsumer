@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class UriHelperService {
 
   //#region URIs
-  private static readonly uri_base = "http://localhost:8888/";
-  //private static readonly uri_base = "/";
+  //private static readonly uri_base = "http://localhost:8888/api/";
+  private static readonly uri_base = "/api/";
 
   private static readonly uri_postClientLogin = "auth"
   private static readonly uri_postClientRegister = "auth/register"

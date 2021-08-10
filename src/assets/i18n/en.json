@@ -1,0 +1,13 @@
+{
+  "login": {
+    "login" : "Login",
+    "username" : "username / mail",
+    "password" : "password",
+    "forget" : "Forget your password?",
+    "submit" : "Login",
+    "guest" : "Guest",
+    "account" : "Don´t have an account?",
+    "register" : "SingUp",
+    "powered" : "Powered by Cerberus®"
+  }
+}

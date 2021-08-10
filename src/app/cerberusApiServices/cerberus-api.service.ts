@@ -16,7 +16,7 @@ export class CerberusApiService {
   ) {
   }
 
-  public async getProduct(){
+  public getProduct(){
 
     var header = {
       headers: new HttpHeaders()
@@ -29,7 +29,7 @@ export class CerberusApiService {
     return this.httpClient.get(UriHelperService.getUriProducts(), header)
   }
 
-  public async getCategories(){
+  public getCategories(){
 
     var header = {
       headers: new HttpHeaders()

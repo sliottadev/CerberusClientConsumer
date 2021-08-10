@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionService } from 'src/app/session/session.service';
+import { Observable } from 'rxjs';
 import { CerberusApiService } from '../../cerberusApiServices/cerberus-api.service';
 
 @Component({
@@ -13,36 +13,37 @@ export class OrderComponent implements OnInit {
   categories;
   product;
 
+  renderReady = false;
+
   constructor(
     private cerberusApiService: CerberusApiService,
     ) {
   }
 
   ngOnInit(): void {
-    this.getCategories();
-    this.getProducts();
-  }
-
-  private async getProducts (){
-    (await this.cerberusApiService.getProduct())
-      .subscribe(
-        res => {
-          this.products = res
-          console.log(this.products)
-        },
-        err => console.log(err)
+    this.getCategories().subscribe(
+      succ => {
+        console.log(succ);
+        this.categories = succ;
+        this.getProducts().subscribe(
+          succe => {
+            console.log(succe);
+            this.products = succe;
+            this.renderReady = true;
+          },
+          erro => console.log(erro)
+        )
+      },
+      err => console.log("Error Categories")
     );
   }
 
-  private async getCategories(){
-    (await this.cerberusApiService.getCategories())
-    .subscribe(
-      res => {
-        this.categories = res;
-        console.log(this.categories);
-      },
-      err => console.log(err)
-    )
+  private getProducts () : Observable<any>{
+    return this.cerberusApiService.getProduct();
+  }
+
+  private getCategories() : Observable<any>{
+    return this.cerberusApiService.getCategories();
   }
 
   private getProductById(id : number){
